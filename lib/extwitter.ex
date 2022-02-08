@@ -790,6 +790,20 @@ defmodule ExTwitter do
   @impl Behaviour
   defdelegate destroy_direct_message(id, options), to: ExTwitter.API.DirectMessages
 
+  @doc """
+  POST direct_messages/indicate_typing
+
+  ## Examples
+
+      ExTwitter.indicate_typing(12345)
+
+  ## Reference
+
+  https://developer.twitter.com/en/docs/twitter-api/v1/direct-messages/typing-indicator-and-read-receipts/api-reference/new-typing-indicator
+  """
+  @impl Behaviour
+  defdelegate direct_messages_indicate_typing(recipient_id), to: ExTwitter.API.DirectMessages
+
   # -------------- Friends & Followers -------------
 
   # GET friendships/no_retweets/ids

@@ -59,6 +59,7 @@ defmodule ExTwitter.Behaviour do
               ExTwitter.Model.DirectMessage.t()
   @callback destroy_direct_message(integer()) :: ExTwitter.Model.DirectMessage.t()
   @callback destroy_direct_message(integer(), Keyword.t()) :: ExTwitter.Model.DirectMessage.t()
+  @callback direct_messages_indicate_typing(String.t() | integer()) :: :ok
   @callback friend_ids(String.t() | integer() | Keyword.t()) :: ExTwitter.Model.Cursor.t()
   @callback friend_ids(String.t() | integer(), Keyword.t()) :: ExTwitter.Model.Cursor.t()
   @callback follower_ids(String.t() | integer() | Keyword.t()) :: ExTwitter.Model.Cursor.t()

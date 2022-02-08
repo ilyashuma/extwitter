@@ -33,4 +33,9 @@ defmodule ExTwitter.API.DirectMessages do
     request(:post, "1.1/direct_messages/new.json", params)
     |> ExTwitter.Parser.parse_direct_message
   end
+
+  def direct_messages_indicate_typing(recipient_id) do
+    params = [recipient_id: recipient_id]
+    request(:post, "1.1/direct_messages/indicate_typing.json", params)
+  end
 end
